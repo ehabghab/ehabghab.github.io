@@ -1,0 +1,1500 @@
+/*
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mb-\[40px\] {
+  margin-bottom: 40px;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-\[-10px\] {
+  margin-top: -10px;
+}
+
+.mt-\[-40px\] {
+  margin-top: -40px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pt-0\.5 {
+  padding-top: 0.125rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-1\.5 {
+  padding-top: 0.375rem;
+}
+
+.pt-\[2px\] {
+  padding-top: 2px;
+}
+
+.pt-\[3px\] {
+  padding-top: 3px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-mooli {
+  font-family: "Mooli", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-\[\#67e8f9\] {
+  --tw-text-opacity: 1;
+  color: rgb(103 232 249 / var(--tw-text-opacity));
+}
+
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
+.text-slate-200 {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
+.text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.root{
+  background-color: black;
+}
+
+.main-div{
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  /* position: relative; */
+}
+
+.border {
+  max-height: 0;
+  max-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .border {
+    max-height: 100%;
+    min-width: calc((100vw - 1000px) / 2);
+    max-width: calc((100vw - 1000px) / 2);
+  }
+}
+
+@media (min-width: 1536px) {
+  .border {
+    margin-left: calc(((100vw - 1000px) / 2) - 300px);
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+.border{
+  border: 0;
+}
+
+.logo {
+  margin-left: 2%;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  width: 60px;
+}
+
+.personal-img-container{
+  /* @apply sm:mt-[calc(-100+(100vw-640)*.28)] lg:mt-0;  */
+  position: relative ;
+  top: 0px;
+  z-index: 2;
+}
+
+.personal-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+  width: 75%;
+}
+
+@media (min-width: 640px) {
+  .personal-img {
+    margin-top: 0px;
+    width: calc(285px + (100vw - 640px) * .18);
+  }
+}
+
+@media (min-width: 1024px) {
+  .personal-img {
+    margin-top: -30px;
+    margin-right: 0px;
+    width: 75%;
+  }
+}
+
+.personal-img{
+  z-index: 2;
+  /* transform: translateX(100px); */
+  scale: .8;
+  opacity: 0;
+  animation:zoom-in-image 1s ease-out forwards;
+}
+
+@keyframes zoom-in-image{
+  100%{
+    scale: 1;
+  }
+}
+
+.showModeFull{
+  animation:zoom-in-image 1s ease-out forwards,
+              image-full 1s ease-out forwards;
+}
+
+.showModeOpaque{
+  animation:zoom-in-image 1s ease-out forwards,
+            image-opaque 1s ease-out forwards;
+}
+
+@keyframes image-opaque {
+  100%{
+    opacity: .25;
+  }
+}
+
+@keyframes image-full {
+  100%{
+    opacity: .9;
+  }
+}
+
+.opening {
+  display: block;
+  min-height: calc(100vh - (41px + 80px));
+  flex-direction: row;
+  padding-top: 15%;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .opening {
+    display: flex;
+    min-height: calc(100vh - (41px + 80px));
+  }
+}
+
+.opening>*{
+  flex: 1 1 0;
+}
+
+.intro {
+  position: absolute;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 1rem;
+  padding-top: 50px;
+}
+
+@media (min-width: 640px) {
+  .intro {
+    position: relative;
+    padding-top: 0px;
+  }
+}
+
+.intro{
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  font-family: "Mooli", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+  font-weight: 100;
+}
+
+.hello {
+  font-family: "Mooli", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  opacity: 0;
+  animation: reveal-text .5s .5s ease-in forwards;
+}
+
+.hello-header-rest {
+  padding-left: 0.25rem;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: reveal-text .5s 1.4s ease-in forwards;
+}
+
+@keyframes reveal-text {
+  to{
+    opacity: 1;
+  }
+}
+
+.intro-name {
+  font-family: "Mooli", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: calc((100vw / 33) * 3.05);
+  --tw-text-opacity: 1;
+  color: rgb(103 232 249 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .intro-name {
+    font-size: calc((100vw / 65) * 3.05);
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro-name {
+    font-size: 3rem;
+  }
+}
+
+.intro-name{
+  letter-spacing: 0.033em;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation:
+    typing 1.2s 2s steps(30, end) forwards,
+    blink-caret .25s 2s step-end forwards 6;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+    border-color: transparent;
+  }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+  from,
+    to {
+    border-right: 4px solid;
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: rgb(67, 151, 152);
+  }
+}
+
+.intro-para {
+  text-align: justify;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+  overflow: hidden;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: intro-para-animate .8s 3.4s ease-in forwards;
+}
+
+@keyframes intro-para-animate {
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.announcement-content {
+  opacity: 0;
+  animation: opacity-animate .75s 4.2s ease-in forwards;
+}
+
+.contact-bar {
+  opacity: 0;
+  animation: opacity-animate .75s 4.8s ease-in forwards;
+}
+
+@keyframes opacity-animate {
+  to {
+    opacity: 1;
+  }
+}
+
+.contact-bar-img{
+  transform: scale3d(.7,.7,.7);
+  cursor: pointer;
+}
+
+.contact-bar-img:hover{
+  transform: scale3d(1.1,1.1,1.1);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 640px) {
+  .contact-bar-img:hover {
+    transition-duration: 400;
+  }
+}
+
+.contact-bar-img:hover{
+  /* sm:scale-[1.5] scale-[1.3]; */
+}
+
+.contact-bar-img:not(:hover){
+  transform: scale3d(.7,.7,.7);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 640px) {
+  .contact-bar-img:not(:hover) {
+    transition-duration: 400;
+  }
+}
+
+.contact-bar-img:not(:hover){
+  /* scale-[1] */
+}
+
+.project-img{
+  cursor: pointer;
+}
+
+.project-img:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 640px) {
+  .project-img:hover {
+    --tw-scale-x: 1.3;
+    --tw-scale-y: 1.3;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.project-img:not(:hover) {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.announcement-sign {
+  --tw-bg-opacity: 1;
+  background-color: rgb(218 170 0 / var(--tw-bg-opacity));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.announcement {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #C10A28 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(193 10 40 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(117 71 192 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #7547c0 var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: #67e8f9 var(--tw-gradient-to-position);
+  --tw-gradient-to-position: 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  background-position: top center;
+  animation:change-text-color 10s ease-in-out infinite;
+}
+
+@keyframes change-text-color {
+  0%{
+    background-position: 10% center;
+  }
+
+  50%{
+    background-position: 100% center;
+  }
+
+  100%{
+    background-position: 10% center;
+  }
+}
+
+.scroll-down {
+  display: inline-block;
+  --tw-translate-y: 5px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  animation:bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  50% {
+    --tw-translate-y: 10px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  100% {
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.section-container {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    margin-left: 5%;
+    margin-right: 4.4%;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    margin-left: 2%;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    margin-right: 0.5rem;
+    display: flex;
+    padding-right: 0px;
+    padding-left: 1rem;
+  }
+}
+
+.section-title-container {
+  margin-left: 5%;
+  margin-right: 3%;
+  flex: 22;
+}
+
+@media (min-width: 768px) {
+  .section-title-container {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.section-title-container{
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 10;
+  opacity: 0;
+}
+
+.section-title-container.show-large{
+  animation: show-section-title-large .8s ease-out forwards;
+}
+
+.section-title-container.show{
+  animation: show-section-title .8s ease-out forwards;
+}
+
+@keyframes show-section-title-large {
+  from{
+    opacity: .1;
+    scale:.8;
+    transform: translateX(-40px);
+  }
+
+  to{
+    opacity: 1;
+    scale:1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes show-section-title {
+  from{
+    opacity: .1;
+    scale:.8;
+    transform: translateY(100px);
+  }
+
+  to{
+    opacity: 1;
+    scale:1;
+    transform: translateY(0px);
+  }
+}
+
+.section-title-text {
+  text-align: center;
+  font-size: 35px;
+}
+
+@media (min-width: 768px) {
+  .section-title-text {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title-text {
+    font-size: 40px;
+  }
+}
+
+.section-title-text{
+  line-height: 1.1;
+}
+
+.section-sep {
+  display: none;
+  flex: 2;
+  border-left-width: 2px;
+  border-color: #67e8f9de;
+}
+
+@media (min-width: 640px) {
+  .section-sep {
+    display: block;
+  }
+}
+
+.section-sep{
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  scale:.4;
+}
+
+.section-sep.show-large{
+  animation: section-sep-show .7s ease-in-out forwards;
+}
+
+.section-sep.show{
+  opacity: 1;
+  scale: 1;
+  box-shadow: #67e8f9 -5px 0px 5px -3px;
+}
+
+@keyframes section-sep-show {
+  from{
+    opacity: .5;
+    scale:.4;
+  }
+
+  to{
+    opacity: 1;
+    scale: 1;
+    box-shadow: #67e8f9 -5px 0px 5px -3px;
+  }
+}
+
+@keyframes animate-edu-subsection {
+  from{
+    transform: translateY(75px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.section-content-container {
+  margin-top: 1rem;
+  flex: 71;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .section-content-container {
+    margin-top: 0px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.section-content-container{
+  z-index: 10;
+}
+
+.date {
+  display: none;
+  min-width: 0px;
+  font-style: italic;
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .date {
+    display: block;
+  }
+}
+
+.subsection-para {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.preface {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .preface {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.preface{
+  opacity: 0;
+}
+
+.preface.show-large{
+  animation: reveal-text .7s ease-in forwards;
+}
+
+.preface.show{
+  animation: reveal-text .7s ease-in forwards;
+}
+
+.subsection {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1024px) {
+  .subsection {
+    --tw-translate-x: 40px;
+    --tw-scale-x: 1.2;
+    --tw-scale-y: 1.2;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.subsection{
+  opacity: 0;
+}
+
+.subsection.show{
+  animation: show-subsection .5s ease-in forwards;
+}
+
+.subsection.show-large{
+  animation: show-subsection-large .5s ease-in forwards;
+}
+
+.subsection.opaque.show{
+  animation: show-subsection-opaque .5s ease-in forwards;
+}
+
+.subsection.opaque.show-large{
+  animation: show-subsection-opaque-large .5s ease-in forwards;
+}
+
+@keyframes show-subsection {
+  from{
+    transform: translateY(75px);
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes show-subsection-large {
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes show-subsection-opaque {
+  from{
+    transform: translateY(75px);
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: .5;
+  }
+}
+
+@keyframes show-subsection-opaque-large {
+  to{
+    transform: translateX(0px);
+    opacity: .5;
+    scale: 1;
+  }
+}
+
+.work-exp-subsection-title-container {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-exp-subsection-content-container {
+  padding: 0.25rem;
+  text-align: justify;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.project-signs-container{
+  text-align: end;
+  justify-content: end;
+}
+
+.project-sign{
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.section-cover{
+  position: relative;
+  box-shadow: rgba(103, 232, 249, 0.3) 5px 5px 5px , rgba(117,71,192, 0.25) 10px 10px 10px, rgba(117,71,192, 0.2) 15px 15px 15px, rgba(117,71,192, 0.15) 20px 20px 20px, rgba(117,71,192, .1) 25px 25px 25px,rgba(117,71,192, .05) 30px 30px 30px;
+  /* border-color: rgba(5, 215, 226, 0.183); */
+  border-color: #383242;
+  background-color: black;
+  opacity: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 9px;
+  border-width: .9px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 5%;
+  padding-right: 3%;
+}
+
+@media (min-width: 1024px) {
+  .section-cover {
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+    border-width: 0px;
+    opacity: 1;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+.section-cover{
+  z-index: 10;
+}
+
+.section-cover.show{
+  animation: show-section-cover .8s ease-in forwards;
+}
+
+.section-cover.show-large{
+  opacity: 1;
+}
+
+@keyframes show-section-cover {
+  from{
+    transform: translateY(100px);
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.sky-sep{
+  position: relative;
+  max-height: 80px;
+  min-height: 80px;
+  z-index: 1;
+}
+
+.sk {
+  position: absolute;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+#firstSkySep canvas{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 640px) {
+  .sm\:ml-\[-8px\] {
+    margin-left: -8px;
+  }
+}
